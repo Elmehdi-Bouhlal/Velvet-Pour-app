@@ -18,7 +18,7 @@ onMounted(() => {
         },
         {
             duration: 1,
-            backgroundColor: "#0000050",
+            backgroundColor: "#00000050",
             ease: "power1.inOut",
             backgroundFilter: "blur(10px)",
         },
