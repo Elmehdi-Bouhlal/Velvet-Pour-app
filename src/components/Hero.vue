@@ -80,4 +80,7 @@ onMounted(() => {
             </div>
         </div>
     </section>
+    <div class="video absolute inset-0">
+        <video></video>
+    </div>
 </template>
