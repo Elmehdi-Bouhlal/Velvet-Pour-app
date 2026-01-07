@@ -4,6 +4,7 @@ import { SplitText } from "gsap/SplitText";
 import gsap from "gsap";
 
 onMounted(() => {
+    //hero section
     const heroSplit = new SplitText(".title", { type: "chars, words" });
     const paragraphSplit = new SplitText(".subtitle", { type: "lines" });
     heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
