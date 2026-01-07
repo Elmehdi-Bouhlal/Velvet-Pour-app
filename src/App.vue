@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 <template>
     <main>
         <Navbar />
+        <!-- hero section code -->
         <Hero />
         <div class="h-dvh bg-black"></div>
     </main>

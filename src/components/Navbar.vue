@@ -4,6 +4,7 @@ import { navLinks } from "../../constants";
 import gsap from "gsap";
 
 onMounted(() => {
+    // Initialize GSAP animations
     const navTween = gsap.timeline({
         scrollTrigger: {
             trigger: "nav",
