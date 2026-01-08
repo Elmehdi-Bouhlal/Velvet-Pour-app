@@ -1,10 +1,12 @@
 <script setup>
-import { onMounted } from "vue";
+import { useMediaQuery } from "@vueuse/core";
 import { SplitText } from "gsap/SplitText";
+import { ref, onMounted } from "vue";
 import gsap from "gsap";
 
 onMounted(() => {
-    //hero section
+    const videoRef = ref(null);
+    const isMobile = useMediaQuery("(max-width: 767px)");
     const heroSplit = new SplitText(".title", { type: "chars, words" });
     const paragraphSplit = new SplitText(".subtitle", { type: "lines" });
     heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
@@ -44,6 +46,15 @@ onMounted(() => {
             },
             0,
         );
+
+    const startAnimation = isMobile ? "top 50%" : "center 60%";
+    const endAnimation = isMobile ? "120% top" : "buttom top";
+
+    videoTimelineRef;
+
+    videoRef.current.onloadedmetadata = () => {
+        videoRef.current.play();
+    };
 });
 </script>
 
@@ -82,6 +93,12 @@ onMounted(() => {
         </div>
     </section>
     <div class="video absolute inset-0">
-        <video></video>
+        <video
+            src="/videos/input.mp4"
+            ref="videoRef"
+            muted
+            playsinline
+            preloard="auto"
+        ></video>
     </div>
 </template>
