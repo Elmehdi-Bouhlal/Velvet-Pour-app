@@ -5,100 +5,98 @@ import { ref, onMounted } from "vue";
 import gsap from "gsap";
 
 onMounted(() => {
-    const videoRef = ref(null);
-    const isMobile = useMediaQuery("(max-width: 767px)");
-    const heroSplit = new SplitText(".title", { type: "chars, words" });
-    const paragraphSplit = new SplitText(".subtitle", { type: "lines" });
-    heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
-    gsap.from(heroSplit.chars, {
-        yPercent: 100,
-        duration: 1.8,
-        ease: "expo.out",
-        stagger: 0.05,
-    });
-    gsap.from(paragraphSplit.lines, {
-        opacity: 0,
-        duration: 1.8,
-        ease: "expo.out",
-        stagger: 0.06,
-        yPercent: 100,
-        delay: 1,
-    });
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: "#herp",
-            start: "top top",
-            end: "bottom bottom",
-            scrub: true,
-        },
+  // hero section
+  const videoRef = ref(null);
+  const isMobile = useMediaQuery("(max-width: 767px)");
+  const heroSplit = new SplitText(".title", { type: "chars, words" });
+  const paragraphSplit = new SplitText(".subtitle", { type: "lines" });
+  heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
+  gsap.from(heroSplit.chars, {
+    yPercent: 100,
+    duration: 1.8,
+    ease: "expo.out",
+    stagger: 0.05,
+  });
+  gsap.from(paragraphSplit.lines, {
+    opacity: 0,
+    duration: 1.8,
+    ease: "expo.out",
+    stagger: 0.06,
+    yPercent: 100,
+    delay: 1,
+  });
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: "#herp",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+      },
     })
-        .to(
-            ".right-leaf",
-            {
-                y: 200,
-            },
-            0,
-        )
-        .to(
-            ".left-leaf",
-            {
-                y: -200,
-            },
-            0,
-        );
+    .to(
+      ".right-leaf",
+      {
+        y: 200,
+      },
+      0,
+    )
+    .to(
+      ".left-leaf",
+      {
+        y: -200,
+      },
+      0,
+    );
 
-    const startAnimation = isMobile ? "top 50%" : "center 60%";
-    const endAnimation = isMobile ? "120% top" : "buttom top";
+  const startAnimation = isMobile ? "top 50%" : "center 60%";
+  const endAnimation = isMobile ? "120% top" : "buttom top";
 
-    videoTimelineRef;
+  videoTimelineRef;
 
-    videoRef.current.onloadedmetadata = () => {
-        videoRef.current.play();
-    };
+  videoRef.current.onloadedmetadata = () => {
+    videoRef.current.play();
+  };
 });
 </script>
 
 <template>
-    <section id="hero" class="noisy">
-        <h1 class="title">MOJITO</h1>
-        <img
-            src="/images/hero-left-leaf.png"
-            alt="left-leaf"
-            class="left-leaf"
-        />
-        <img
-            src="/images/hero-right-leaf.png"
-            alt="right-leaf"
-            class="right-leaf"
-        />
+  <section id="hero" class="noisy">
+    <h1 class="title">MOJITO</h1>
+    <img src="/images/hero-left-leaf.png" alt="left-leaf" class="left-leaf" />
+    <img
+      src="/images/hero-right-leaf.png"
+      alt="right-leaf"
+      class="right-leaf"
+    />
 
-        <div class="body">
-            <div class="content">
-                <div class="space-y-5 hidden md:block">
-                    <p>Cool. Crisp. Classic.</p>
-                    <p class="subtitle">
-                        Sip the Sprit <br />
-                        of Summer
-                    </p>
-                </div>
-                <div class="view-cocktails">
-                    <p class="subtitle">
-                        Every cocktail on our menu is a blend of premium
-                        ingredients, creative flair, and timeless recipes —
-                        designed to delight your senses.
-                    </p>
-                    <a href="#cocktails">View Cocktails</a>
-                </div>
-            </div>
+    <div class="body">
+      <div class="content">
+        <div class="space-y-5 hidden md:block">
+          <p>Cool. Crisp. Classic.</p>
+          <p class="subtitle">
+            Sip the Sprit <br />
+            of Summer
+          </p>
         </div>
-    </section>
-    <div class="video absolute inset-0">
-        <video
-            src="/videos/input.mp4"
-            ref="videoRef"
-            muted
-            playsinline
-            preloard="auto"
-        ></video>
+        <div class="view-cocktails">
+          <p class="subtitle">
+            Every cocktail on our menu is a blend of premium ingredients,
+            creative flair, and timeless recipes — designed to delight your
+            senses.
+          </p>
+          <a href="#cocktails">View Cocktails</a>
+        </div>
+      </div>
     </div>
+  </section>
+  <div class="video absolute inset-0">
+    <video
+      src="/videos/input.mp4"
+      ref="videoRef"
+      muted
+      playsinline
+      preloard="auto"
+    ></video>
+  </div>
 </template>
