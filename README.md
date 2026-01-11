@@ -9,3 +9,6 @@ this is project is to learn gsap animation
 i spend a lot of time doing a multiple animation
 
 i use vue js as front end freamwork to work with gsap
+
+> [!IMPORTANT]
+> the perfect freamwork for using gsap animation is react
