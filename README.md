@@ -16,3 +16,5 @@ i use vue js as front end freamwork to work with gsap
 add new component with animation
 
 remove unuses style
+
+add new state manager
