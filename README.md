@@ -18,5 +18,3 @@ add new component with animation
 remove unuses style
 
 add new state manager
-
-test
