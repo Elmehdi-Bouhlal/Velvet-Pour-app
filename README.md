@@ -13,6 +13,8 @@ i use vue js as front end freamwork to work with gsap
 > [!IMPORTANT]
 > the perfect freamwork for using gsap animation is react
 
+update
+
 add new component with animation
 
 remove unuses style
