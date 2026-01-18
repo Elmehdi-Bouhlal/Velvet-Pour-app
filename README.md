@@ -19,6 +19,6 @@ insert
 
 add new component with animation
 
-remove unuses style
+remove unuses style 1
 
 add new state manager
