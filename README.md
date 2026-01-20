@@ -15,7 +15,7 @@ i use vue js as front end freamwork to work with gsap
 
 update 2
 
-insert 2 3
+insert 2 3 4
 
 add new component with animation
 
