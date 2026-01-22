@@ -26,6 +26,8 @@ add new component with animation
 
 remove unuses style 2
 
+1
+
 add new state manager
 
 add
