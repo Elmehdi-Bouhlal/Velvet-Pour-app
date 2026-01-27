@@ -64,6 +64,7 @@ remove unuses style 2
 5
 
 6
+7
 
 add new state manager
 
