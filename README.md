@@ -44,6 +44,8 @@ update 2
 18
 
 19
+
+20
 insert 2 3 4 5
 
 add new component with animation
