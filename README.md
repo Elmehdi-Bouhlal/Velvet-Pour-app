@@ -70,6 +70,12 @@ update 2
 32
 
 33
+
+| Column1 | Column2 | Column3 | Column4 |
+| ------- | ------- | ------- | ------- |
+| Item1.1 | Item2.1 | Item3.1 | Item4.1 |
+| Item1.2 | Item2.2 | Item3.2 | Item4.2 |
+
 insert 2 3 4 5
 
 add new component with animation
