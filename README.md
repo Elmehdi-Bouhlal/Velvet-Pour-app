@@ -77,6 +77,8 @@ update 2
 | Item1.2 | Item2.2 | Item3.2 | Item4.2 |
 
 34
+
+35
 insert 2 3 4 5
 
 add new component with animation
