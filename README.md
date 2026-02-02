@@ -15,6 +15,7 @@ i use vue js as front end freamwork to work with gsap
 
 update 2
 a1
+a2
 3
 4
 
